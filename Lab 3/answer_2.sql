@@ -1,0 +1,1 @@
+SELECT Country.Name, Lang.Language, Lang.Percentage FROM world32.Country Country, world32.CountryLanguage Lang WHERE Country.Code = Lang.CountryCode AND Lang.Percentage = (SELECT MAX(Percentage) FROM world32.CountryLanguage WHERE CountryCode = Lang.CountryCode);
